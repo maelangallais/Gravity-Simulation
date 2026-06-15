@@ -1,0 +1,142 @@
+
+#settings {
+    z-index: 2;
+    position: absolute;
+    top: 5vmin;
+    left: 5vmin;
+    background-color: rgba(230, 230, 250, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    aspect-ratio: 1/1;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+    border-radius: 1.5vmin;
+    user-select: none;
+
+    height: 5vmin;
+    width: 5vmin;
+}
+
+
+
+#settingsButton {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: fit-content;
+    aspect-ratio: 1/1;
+    font-size: 3.5vmin;
+    cursor: pointer;
+}
+
+#settingsScreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+#buttons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+#buttons button,
+#buttons input {
+    cursor: pointer;
+}
+
+#collisionsSettings {
+    position: relative;
+    width: fit-content;
+    height: 50%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1%;
+    box-sizing: border-box;
+    border: 1px #a94dc1 dashed;
+    border-radius: 1.5vmin;
+}
+
+#collisionsBox,
+#bouncesBox,
+#contactThresholdBox {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    box-sizing: border-box;
+    border: 1px #000 solid;
+    border-radius: 1.5vmin;
+    overflow: hidden;
+}
+
+#collisionsBox,
+#bouncesBox {
+    flex-direction: row;
+}
+
+#contactThresholdBox {
+    flex-direction: column;
+}
+
+.buttonTitle {
+    text-align: center;
+}
+
+#contactThresholdTitleBox {
+    width: 108%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#saveBox {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+#bouncesMask,
+#contactThresholdMask,
+#saveMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#pauseButton {
+    z-index: 4;
+    position: absolute;
+    top: 5.3vmin;
+    left: 5.3vmin;
+    height: fit-content;
+    aspect-ratio: 1/1;
+    font-size: 2.1vmin;
+    transform: translate(-50%, -50%);
+    cursor: help;
+}

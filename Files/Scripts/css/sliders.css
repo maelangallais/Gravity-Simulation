@@ -1,0 +1,97 @@
+
+#settingsSliders {
+    display: flex;
+    background-color: rgba(245, 245, 220, 0.5);
+    flex-direction: column;
+    height: 50%;
+    margin: 2%;
+    border: 1px #333 solid;
+    box-sizing: border-box;
+    border-top-left-radius: 1.5vmin;
+    border-bottom-left-radius: 1.5vmin;
+    overflow-y: scroll;
+}
+
+#settingsSliders> :last-child {
+    border-bottom: none;
+}
+.planetContainer {
+    padding: 1%;
+    border-bottom: 1px #111 solid;
+}
+
+.planetComponent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1%;
+}
+
+.planetComponentName {
+    /* text-align: left; */
+    font-size: 2.2vmin;
+    user-select: none;
+}
+
+.planetComponentSliderContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.planetComponentSlider {
+    width: 70%;
+    cursor: pointer;
+    accent-color: #F356EC;
+}
+
+.planetComponentSliderValue {
+    width: 20%;
+    font-size: 2vmin;
+    user-select: text;
+}
+
+.planetComponentSliderDecrease,
+.planetComponentSliderIncrease {
+    background-color: rgb(225, 225, 200);
+    height: 3vh;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    font-size: 2.5vmin;
+    cursor: pointer;
+    text-align: center;
+}
+
+.planetComponentColorContainer {
+    height: 5vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.planetComponentColorPicker {
+    width: 50%;
+    cursor: pointer;
+}
+
+.planetComponentStaticBoxContainer {
+    width: fit-content;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.planetComponentStaticBox {
+    cursor: pointer;
+}
+
+.planetName {
+    height: 4vh;
+    font-size: 2.5vmin;
+    user-select: none;
+}
+
+.planetComponentRemovePlanet {
+    height: fit-content;
+    cursor: pointer;
+}
