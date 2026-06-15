@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+        <meta name="description" content="Interactive and visual physics simulation to explore the mechanics of gravity !">
+        <meta name="Author" content="Maëlan Gallais">
+        <meta name="keywords" content="simulation gravity physics javascript canvas interactive space astronomy planets">
+        <meta name="robot" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Centered Gravity Simulation</title>
+    
+        <!-- Used to scale automatically the icon of the site that appears next to the title -->
+        <link rel="icon" href="Files/Pictures/galaxy_icon_32.ico" sizes="any">
+        <link rel="icon" href="Files/Pictures/galaxy_icon_svg.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="Files/Pictures/galaxy_icon_180.png">
+    
+        <link rel="stylesheet" href="Files/Scripts/css/main.css">
+        <link rel="stylesheet" href="Files/Scripts/css/settings.css">
+        <link rel="stylesheet" href="Files/Scripts/css/sliders.css">
+        <link rel="stylesheet" href="Files/Scripts/css/music.css">
+    
+        <script src="Files/Scripts/js/musicBuffer.js" defer></script>
+
+        <script src="Files/Scripts/js/sphere.js" defer></script>
+        <script src="Files/Scripts/js/usefulMethods.js" defer></script>
+        <script src="Files/Scripts/js/constants.js" defer></script>
+        <script src="Files/Scripts/js/collisions.js" defer></script>
+        <script src="Files/Scripts/js/settings.js" defer></script>
+        <script src="Files/Scripts/js/simulation.js" defer></script>
+        <script src="Files/Scripts/js/music.js" defer></script>
+        <script src="Files/Scripts/js/main.js" defer></script>
+    </head>
+    
+    <body>
+        <div id="pauseButton">▶️</div>
+        <div id="settings">
+            <div id="settingsScreen">
+                <div id="settingsButton">⚙️</div>
+                <div id="buttons">
+                    <button id="playButton">Launch the simulation</button>
+                    <button id="stepForward">Step one frame forward</button>
+                    <button id="resetButton">Reset simulation</button>
+                    <button id="addPlanet">Add a planet</button>
+
+                    <div id="collisionsSettings">
+                        <div id="collisionsBox">
+                            <div class="buttonTitle">Collisions :</div>
+                            <input type="checkbox" id="collisionsButton">
+                        </div>
+                        <div id="bouncesBox">
+                            <div class="buttonTitle">Bounces :</div>
+                            <input type="checkbox" id="bouncesButton">
+                            <div id="bouncesMask"></div>
+                        </div>
+                        <div id="contactThresholdBox">
+                            <div id="contactThresholdTitleBox">
+                                <div class="buttonTitle">Contact threshold :</div>
+                                <div class="buttonValue"></div>
+                            </div>
+                            <input type="range" id="contactThresholdSlider">
+                            <div id="contactThresholdMask"></div>
+                        </div>
+                    </div>
+
+                    <div id="saveBox">
+                        <button id="saveSettings">Save settings</button>
+                        <div id="saveMask"></div>
+                    </div>
+                </div>
+                <div id="settingsSliders"></div>
+            </div>
+        </div>
+        <div id="windowScreen">
+        </div>
+        <canvas id="simulationCanvas"></canvas>
+        <div id="musicSettings">
+            <div id="musicButtons">
+                <div id="previousTrack">⏮️</div>
+                <div id="playPauseMusic">▶️</div>
+                <div id="nextTrack">⏭️</div>
+            </div>
+            <div id="musicVolumeBox">
+                <div id="musicVolumeValue">Volume: 0%</div>
+                <input type="range" id="musicVolumeSlider" min="0" max="1" value="0">
+            </div>
+        </div>
+    </body>
+
+</html>
