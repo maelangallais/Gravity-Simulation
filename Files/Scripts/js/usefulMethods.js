@@ -20,9 +20,8 @@ function generatePlanets() {
     //It allows my saveButtonMask to re-appear because you didn't change any value
     planets = [
         // new Sphere(),
-        new Sphere(76, 123, 0.1, 0, 1e12, 'blanchedalmond'),
-        new Sphere(176, -123, 0.1, 0.5, 6025595860743.568, 'blanchedalmond', true),
-        new Sphere(-76, -212, 0, 0, 50118723362727.15, '#fe5b07')
+        new Sphere(203, 0, 0, -2, 11220184543019.652, '#d7ccff'),
+        new Sphere(0, 0, 0, 0, 50118723362727.15, '#fe5b07', true)
     ];
 }
 
