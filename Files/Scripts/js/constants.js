@@ -10,7 +10,7 @@ const velocityLimit = 10;
 
 let renderLoop = false;
 
-let collisions = true;
+let collisions = false;
 let bounces = false;
 let contactThreshold = 0.85;
 if (!localStorage.getItem('collisions')) localStorage.setItem('collisions', `${collisions};${bounces};${contactThreshold}`);
