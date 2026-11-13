@@ -10,10 +10,11 @@ const velocityLimit = 10;
 
 let renderLoop = false;
 
+let boundaries = true;
 let collisions = false;
 let bounces = false;
 let contactThreshold = 0.85;
-if (!localStorage.getItem('collisions')) localStorage.setItem('collisions', `${collisions};${bounces};${contactThreshold}`);
+if (!localStorage.getItem('collisions')) localStorage.setItem('collisions', `${boundaries};${collisions};${bounces};${contactThreshold}`);
 
 const defaultSettings = [0, 0, 0, 0, 1e12, '#00b', false, 0];
 let planets = [];

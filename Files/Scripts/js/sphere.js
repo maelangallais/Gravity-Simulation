@@ -163,11 +163,14 @@ class Sphere {
         this.x += this.vx;
         this.y += this.vy;
 
-        //Now I inverse the velocity component of the planet that is out of bond to keep its velocity while staying visible on the screen
-        if (this.x > widthLimit + this.sphereRadius && this.vx > 0) this.vx = -this.vx;
-        if (this.x < -widthLimit - this.sphereRadius && this.vx < 0) this.vx = -this.vx;
-        if (this.y > heightLimit + this.sphereRadius && this.vy > 0) this.vy = -this.vy;
-        if (this.y < -heightLimit - this.sphereRadius && this.vy < 0) this.vy = -this.vy;
+        if (boundaries) {
+            //Now I inverse the velocity component of the planet that is out of bond to keep its velocity while staying visible on the screen
+            //If the associated variable is checked
+            if (this.x > widthLimit + this.sphereRadius && this.vx > 0) this.vx = -this.vx;
+            if (this.x < -widthLimit - this.sphereRadius && this.vx < 0) this.vx = -this.vx;
+            if (this.y > heightLimit + this.sphereRadius && this.vy > 0) this.vy = -this.vy;
+            if (this.y < -heightLimit - this.sphereRadius && this.vy < 0) this.vy = -this.vy;
+        }
     }
 
     clone() {

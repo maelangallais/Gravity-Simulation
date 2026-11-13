@@ -72,6 +72,7 @@
     border-radius: 1.5vmin;
 }
 
+#boundariesBox,
 #collisionsBox,
 #bouncesBox,
 #contactThresholdBox {
@@ -89,6 +90,7 @@
     overflow: hidden;
 }
 
+#boundariesBox,
 #collisionsBox,
 #bouncesBox {
     flex-direction: row;

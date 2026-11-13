@@ -87,9 +87,10 @@ function render(now) {
 
 
 function initWindow() {
-    collisions = localStorage.getItem('collisions').split(';')[0] == 'true';
-    bounces = localStorage.getItem('collisions').split(';')[1] == 'true';
-    contactThreshold = parseFloat(localStorage.getItem('collisions').split(';')[2]);
+    boundaries = localStorage.getItem('collisions').split(';')[0] == 'true';
+    collisions = localStorage.getItem('collisions').split(';')[1] == 'true';
+    bounces = localStorage.getItem('collisions').split(';')[2] == 'true';
+    contactThreshold = parseFloat(localStorage.getItem('collisions').split(';')[3]);
     initCollisionsSettings();
 
     planets = [];

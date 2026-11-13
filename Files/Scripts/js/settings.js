@@ -107,11 +107,17 @@ addPlanetButton.addEventListener('click', () => {
 const bouncesMask = document.querySelector('#bouncesMask');
 const contactThresholdMask = document.querySelector('#contactThresholdMask');
 
+const boundariesButton = document.querySelector('#boundariesButton');
 const collisionsButton = document.querySelector('#collisionsButton');
 const bouncesButton = document.querySelector('#bouncesButton');
 const contactThresholdSlider = document.querySelector('#contactThresholdSlider');
 const contactThresholdValue = document.querySelector('#contactThresholdBox .buttonValue');
 
+boundariesButton.addEventListener('input', () => {
+    boundaries = !boundaries;
+
+    setSaveMaskDisplay();
+});
 collisionsButton.addEventListener('input', () => {
     collisions = !collisions;
     bouncesMask.style.display = collisions ? 'none' : 'flex';
@@ -149,7 +155,7 @@ function initCollisionsSettings() {
 const saveSettingsButton = document.querySelector('#saveSettings');
 const saveSettingsMask = document.querySelector('#saveMask');
 saveSettingsButton.addEventListener('click', () => {
-    localStorage.setItem('collisions', `${collisions};${bounces};${contactThreshold}`);
+    localStorage.setItem('collisions', `${boundaries};${collisions};${bounces};${contactThreshold}`);
     localStorage.setItem('planets', generateListForStorage());
 
     saveSettingsMask.style.display = 'flex';
@@ -386,7 +392,7 @@ function setSaveMaskDisplay() {
     updateSimulation();
 
     if (generateListForStorage() !== localStorage.getItem('planets') ||
-        `${collisions};${bounces};${contactThreshold}` !== localStorage.getItem('collisions')) {
+        `${boundaries};${collisions};${bounces};${contactThreshold}` !== localStorage.getItem('collisions')) {
         saveSettingsMask.style.display = 'none';
     } else {
         saveSettingsMask.style.display = 'flex';
