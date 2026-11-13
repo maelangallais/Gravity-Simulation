@@ -2,6 +2,8 @@
 
 Interactive and visual physics simulation to explore the mechanics of gravity !
 
+👉 The virtual simulation is available online here: https://maelangallais.github.io/Gravity-Simulation
+
 ### 🚀 Features
 * **Celestial Body Management:** Add planets and observe their orbits in real time.
 
