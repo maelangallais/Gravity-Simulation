@@ -154,6 +154,8 @@ contactThresholdSlider.addEventListener('input', () => {
 });
 
 function initCollisionsSettings() {
+    boundariesButton.checked = boundaries;
+
     collisionsButton.checked = collisions;
 
     bouncesButton.checked = bounces;
