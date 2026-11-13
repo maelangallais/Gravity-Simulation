@@ -116,6 +116,21 @@ const contactThresholdValue = document.querySelector('#contactThresholdBox .butt
 boundariesButton.addEventListener('input', () => {
     boundaries = !boundaries;
 
+    if (boundaries) {
+        //Update the planets' positions to stay inside screen's boundaries if asked
+        planets.forEach((planet) => {
+            const recomputedX = Math.max(-widthLimit + planet.sphereRadius, Math.min(planet.x, widthLimit - planet.sphereRadius));
+            const recomputedY = Math.max(-heightLimit + planet.sphereRadius, Math.min(planet.y, heightLimit - planet.sphereRadius));
+
+            if (planet.x != recomputedX || planet.y != recomputedY) {
+                planet.x = recomputedX;
+                planet.y = recomputedY;
+
+                planet.draw();
+            }
+        });
+    }
+
     setSaveMaskDisplay();
 });
 collisionsButton.addEventListener('input', () => {

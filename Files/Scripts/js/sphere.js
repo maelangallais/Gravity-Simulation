@@ -124,6 +124,7 @@ class Sphere {
         //Before, I limited the planet to always stay in the window, I kept in case it could be useful
         // this.x = Math.min(Math.max(this.sphereRadius - widthLimit, this.x), widthLimit - this.sphereRadius - 1);
         // this.y = Math.min(Math.max(this.sphereRadius - heightLimit, this.y), heightLimit - this.sphereRadius - 1);
+        //And now it's a parameter so it has indeed been useful !!
 
         this.element.style.transform = `translate(${this.x - this.sphereRadius}px, ${this.y - this.sphereRadius}px)`;
     }
